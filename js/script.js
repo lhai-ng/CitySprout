@@ -4,7 +4,7 @@ class THeader extends HTMLElement {
         this.innerHTML = `
             <header>
                 <div class="logo-nav">
-                    <img src="svg-image/logo.svg" alt="Logo">
+                    <img class="logo" src="svg-image/logo.svg" alt="Logo">
                     <nav>
                         <input type="checkbox" id="sidebar-active">
                         <label for="sidebar-active" class="open-sidebar-button">
@@ -26,13 +26,13 @@ class THeader extends HTMLElement {
                 </div>
                 <div class="icon-set"> 
                     <a href="">
-                        <img width="24px" height="24px" src="svg-image/search.svg" alt="Search">
+                        <img width="20px" height="20px" src="svg-image/search.svg" alt="Search">
                     </a>
                     <a href="">
-                        <img width="24px" height="24px" src="svg-image/login.svg" alt="Login">
+                        <img width="20px" height="20px" src="svg-image/login.svg" alt="Login">
                     </a>
                     <a class="cart-icon" href="">
-                        <img width="24px" height="24px" src="svg-image/cart.svg" alt="Cart">
+                        <img width="20px" height="20px" src="svg-image/cart.svg" alt="Cart">
                     </a>
                 </div>
             </header>
