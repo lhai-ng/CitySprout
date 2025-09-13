@@ -99,7 +99,7 @@ h1 span:nth-child(2) {
 
 .fade-out {
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 100vw;
     height: var(--spacing-96);
@@ -141,6 +141,184 @@ h1 span:nth-child(2) {
 }
 .categories-wrapper a h6 {
     text-align: center;
+}
+
+/* Recommended Products Section */
+#recommended-products {
+    width: 100vw;
+    height: fit-content;
+    padding: var(--spacing-128) 0;
+}
+
+#recommended-products h4 {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 var(--spacing-40) 0;
+}
+
+.rec-product-list {
+    position: relative;
+    width: 66.669vw;
+}
+
+.rec-product-list:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--light100);
+    z-index: 2;
+}
+
+.rec-product-list:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--light100);
+    z-index: 2;
+}
+
+.rec-product-list .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 360px;
+    text-decoration: none;
+    color: var(--light0);
+    padding: var(--spacing-8);
+    background: var(--secondary);
+    border-radius: 2px;
+}
+
+.rec-product-list .card-image {
+    width: 224px;
+    height: 224px;
+}
+
+.rec-product-list .card-rating {
+    display: flex;
+    gap: var(--spacing-4);
+    margin: var(--spacing-8) 0 var(--spacing-8) var(--spacing-8);
+    letter-spacing: -1.92px;
+}
+
+.rec-product-list .card-name {
+    font: var(--h6-d);
+    font-weight: 700;
+    margin-left: var(--spacing-8);
+}
+
+.rec-product-list .card-price {
+    position: absolute;
+    bottom: var(--spacing-16);
+    left: var(--spacing-16);
+    width: var(--spacing-64);
+    font: var(--h6-d);
+    color: var(--accent);
+    letter-spacing: -1.6px;
+}
+
+.rec-product-list .card-prevprice {
+    position: absolute;
+    bottom: var(--spacing-16);
+    left: var(--spacing-80);
+    width: var(--spacing-64);
+    font: var(--para-d);
+    color: var(--light60);
+    letter-spacing: -1.6px;
+    text-decoration: 1px line-through;
+}
+
+.rec-product-list .add-to-cart {
+    position: absolute;
+    bottom: 12px;
+    right: 16px;
+
+    width: var(--spacing-72);
+    height: var(--spacing-32);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-4);
+
+    background: var(--accent);
+    color: var(--light100);
+    border-radius: 5px;
+}
+.rec-product-list .add-to-cart p {
+    font: var(--h5-d);
+    font-weight: normal;
+}
+.rec-product-list .add-to-cart img {
+    filter: brightness(0) invert(1);
+}
+
+.card-wrapper {
+    width: 256px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lanislide-wrapper {
+    margin: 0 auto;
+}
+
+.lanislide-content {
+    position: relative;
+}
+
+.lanislide-track {
+    display: flex;
+}
+
+.lanislide-prev, .lanislide-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+    background: transparent;
+    font: var(--h1-d);
+    color: var(--light0);
+    cursor: pointer;
+    z-index: 3;
+}
+
+.lanislide-prev {
+    left: -64px;
+}
+
+.lanislide-next {
+    right: -64px;
+}
+
+.lanislide-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-48);
+}
+
+.lanislide-dot {
+    width: var(--spacing-36);
+    height: var(--spacing-4);
+    border-radius: 2px;
+    border: none;
+    background: #ccc;
+}
+
+.lanislide-dot.active {
+    background: #333;
 }
 
 /* TABLET RESPONSIVE */

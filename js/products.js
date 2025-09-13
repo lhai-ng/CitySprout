@@ -6,6 +6,7 @@ const products = [
         price: '$11.33',
         prevPrice: '$13.95',
         category: 'pest-control',
+        starImageLink: "svg-image/star.svg",
         rating: 4.1,
         description: `
             <p>
@@ -68,6 +69,7 @@ const products = [
         price: '$20.99',
         category: 'pot-planter',
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 3.6,
         description: `
             <p>
@@ -128,6 +130,7 @@ const products = [
         name: 'Basil Seed',
         price: '$3',
         category: 'seed', 
+        starImageLink: "svg-image/star.svg",
         rating: 2.4,
         description: `
             <p>
@@ -189,6 +192,7 @@ const products = [
         name: 'Bio-organic Fertilizer',
         price: '$24.99',
         category: 'soil-fertilizer',
+        starImageLink: "svg-image/star.svg",
         rating: 2.6,
         description: `
             <p>
@@ -247,8 +251,9 @@ const products = [
         id: 5,
         image: 'product-image/blueberry.png',
         name: 'Blueberry Seed',
-        price: '$5',
+        price: '$4.99',
         category: 'seed',
+        starImageLink: "svg-image/star.svg",
         rating: 4.7,
         sold: true,
         description: `
@@ -312,6 +317,7 @@ const products = [
         price: '$2.42',
         category: 'seed',
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 5,
         description: `
             <p>
@@ -379,6 +385,7 @@ const products = [
         prevPrice: '$2.69',
         category: 'seed',
         sold: true,
+        starImageLink: "svg-image/star.svg",
         rating: 1.2,
         description: `
             <p>
@@ -445,6 +452,7 @@ const products = [
         price: '$1.49',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 3.4,
         description: `
             <p>
@@ -513,6 +521,7 @@ const products = [
         prevPrice: '$19.99',
         category: 'pot-planter', 
         readyToShip: false,
+        starImageLink: "svg-image/star.svg",
         rating: 4.5,
         description: `
             <p>
@@ -580,6 +589,7 @@ const products = [
         price: '$1.29',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.6,
         description: `
             <p>
@@ -652,6 +662,7 @@ const products = [
         prevPrice: '$7.59',
         category: 'soil-fertilizer', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.3,
         description: `
             <p>
@@ -719,6 +730,7 @@ const products = [
         price: '$19.99',
         category: 'pot-planter', 
         readyToShip: false,
+        starImageLink: "svg-image/star.svg",
         rating: 3.9,
         description: `
             <p>
@@ -786,6 +798,7 @@ const products = [
         price: '$2',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.1,
         description: `
             <p>
@@ -850,9 +863,10 @@ const products = [
         id: 14,
         image: 'product-image/culantro.png',
         name: 'Culantro',
-        price: '$1',
+        price: '$0.99',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.4,
         description: `
             <p>
@@ -916,6 +930,7 @@ const products = [
         price: '$12.99',
         category: 'soil-fertilizer', 
         readyToShip: false,
+        starImageLink: "svg-image/star.svg",
         rating: 4.5,
         description: `
             <p>
@@ -985,6 +1000,7 @@ const products = [
         prevPrice: '$9.19',
         category: 'gardening-tool', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.3,
         description: `
             <p>
@@ -1061,6 +1077,7 @@ const products = [
         prevPrice: '$6.99',
         category: 'gardening-tool', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 3.5,
         description: `
             <p>
@@ -1133,6 +1150,7 @@ const products = [
         category: 'gardening-tool',
         sold: true, 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 3.8,
         description: `
             <p>
@@ -1204,6 +1222,7 @@ const products = [
         price: '$10.35',
         category: 'gardening-tool', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.0,
         description: `
             <p>
@@ -1275,6 +1294,7 @@ const products = [
         price: '$2.19',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.6,
         description: `
             <p>
@@ -1350,6 +1370,7 @@ const products = [
         prevPrice: '$17.55',
         category: 'gardening-tool', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.4,
         description: `
             <p>
@@ -1423,6 +1444,7 @@ const products = [
         price: '$9.69',
         category: 'gardening-tool', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 3.6,
         description: `
             <p>
@@ -1501,6 +1523,7 @@ const products = [
         price: '$8.79',
         category: 'gardening-tool', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.7,
         description: `
             <p>
@@ -1575,6 +1598,7 @@ const products = [
         prevPrice: '$10.45',
         category: 'gardening-tool', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.7,
         description: `
             <p>
@@ -1648,6 +1672,7 @@ const products = [
         price: '$2.99',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.4,
         description: `
             <p>
@@ -1728,6 +1753,7 @@ const products = [
         category: 'seed', 
         sold: true,
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.2,
         description: `
             <p>
@@ -1806,6 +1832,7 @@ const products = [
         price: '$29.99',
         category: 'pest-control', 
         readyToShip: false,
+        starImageLink: "svg-image/star.svg",
         rating: 4.8,
         description: `
             <p>
@@ -1876,6 +1903,7 @@ const products = [
         price: '$5.39',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.1,
         description: `
             <p>
@@ -1954,6 +1982,7 @@ const products = [
         price: '$18.99',
         category: 'soil-fertilizer', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.5,
         description: `
             <p>
@@ -2019,6 +2048,7 @@ const products = [
         price: '$13.29',
         category: 'pest-control', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 3.8,
         description: `
             <p>
@@ -2090,6 +2120,7 @@ const products = [
         price: '$17,59',
         category: 'soil-fertilizer', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 3.8,
         description: `
             <p>
@@ -2161,6 +2192,7 @@ const products = [
         price: '$0.79',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.7,
         description: `
             <p>
@@ -2236,6 +2268,7 @@ const products = [
         price: '$2.19',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.3,
         description: `
             <p>
@@ -2311,6 +2344,7 @@ const products = [
         price: '$25.49',
         category: 'pest-control', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.3,
         description: `
             <p>
@@ -2380,6 +2414,7 @@ const products = [
         price: '$35.89',
         category: 'pot-planter', 
         readyToShip: false,
+        starImageLink: "svg-image/star.svg",
         rating: 4.3,
         description: `
             <p>
@@ -2447,6 +2482,7 @@ const products = [
         price: '$15.99',
         category: 'gardening-tool', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.3,
         description: `
             <p>
@@ -2515,6 +2551,7 @@ const products = [
         prevPrice: '$25.69',
         category: 'gardening-tool', 
         readyToShip: false,
+        starImageLink: "svg-image/star.svg",
         rating: 4.2,
         description: `
             <p>
@@ -2593,6 +2630,7 @@ const products = [
         price: '$1.79',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.6,
         description: `
             <p>
@@ -2680,6 +2718,7 @@ const products = [
         category: 'seed', 
         sold: true,
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.0,
         description: `
             <p>
@@ -2768,6 +2807,7 @@ const products = [
         price: '$17.49',
         category: 'pest-control', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 3.3,
         description: `
             <p>
@@ -2842,6 +2882,7 @@ const products = [
         price: '$0.89',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 3.9,
         description: `
             <p>
@@ -2922,6 +2963,7 @@ const products = [
         category: 'seed', 
         sold: true,
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.5,
         description: `
             <p>
@@ -3001,6 +3043,7 @@ const products = [
         price: '$1.99',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.1,
         description: `
             <p>
@@ -3075,6 +3118,7 @@ const products = [
         price: '$0.99',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.0,
         description: `
             <p>
@@ -3150,6 +3194,7 @@ const products = [
         price: '$3.19',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.1,
         description: `
             <p>
@@ -3230,6 +3275,7 @@ const products = [
         price: '$39.49',
         category: 'pot-planter', 
         readyToShip: false,
+        starImageLink: "svg-image/star.svg",
         rating: 4.1,
         description: `
             <p>
@@ -3301,6 +3347,7 @@ const products = [
         price: '$39.49',
         category: 'pot-planter', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.7,
         description: `
             <p>
@@ -3372,6 +3419,7 @@ const products = [
         price: '$1.29',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.3,
         description: `
             <p>
@@ -3451,6 +3499,7 @@ const products = [
         price: '$23.49',
         category: 'gardening-tool', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.3,
         description: `
             <p>
@@ -3522,6 +3571,7 @@ const products = [
         price: '$15.99',
         category: 'gardening-tool', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.6,
         description: `
             <p>
@@ -3593,6 +3643,7 @@ const products = [
         price: '$1.49',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.2,
         description: `
             <p>
@@ -3668,6 +3719,7 @@ const products = [
         price: '$0.49',
         category: 'seed', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 4.2,
         description: `
             <p>
@@ -3744,6 +3796,7 @@ const products = [
         price: '$18.49',
         category: 'soil-fertilizer', 
         readyToShip: false,
+        starImageLink: "svg-image/star.svg",
         rating: 5.0,
         description: `
             <p>
@@ -3811,6 +3864,7 @@ const products = [
         price: '$4.99',
         category: 'pest-control', 
         readyToShip: true,
+        starImageLink: "svg-image/star.svg",
         rating: 3.9,
         description: `
             <p>

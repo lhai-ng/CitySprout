@@ -110,7 +110,7 @@ customElements.define("t-footer", TFooter)
 // Add to Cart
 const shoppingCart = document.querySelector('#shopping-cart');
 const cartList = document.querySelector('.cart-list');
-product.loadCart('.cart-list', "svg-image/star.svg");
+product.loadCart('.cart-list');
 
 document.addEventListener('click', (e) => {
     if (e.target.closest('.cart-icon') ) {
@@ -118,6 +118,7 @@ document.addEventListener('click', (e) => {
         e.stopPropagation();
         shoppingCart.style.left = '0';
         document.documentElement.style.overflow = 'hidden';
+        cartList.style.overflow = 'auto';
     }
 })
 
@@ -125,7 +126,27 @@ shoppingCart.addEventListener('click', (e) => {
     if (e.target === shoppingCart) {
         shoppingCart.style.left = '110vw';
         document.documentElement.style.overflow = 'auto';
+        cartList.style.overflow = 'hidden';
     }
 })
 
-// Main
+// Recommended Products
+const recProductList = document.querySelector(".rec-product-list");
+const recProNum = [1, 5, 14, 29, 32, 43, 51];
+recProNum.forEach((number, index) => {
+    const product = products.find(p => p.id === number);
+    const cardWrapper = document.createElement('div');
+    cardWrapper.className = `card-wrapper card-${index}`;
+    const card = product._renderListCard(product);
+    cardWrapper.appendChild(card)
+    recProductList.appendChild(cardWrapper);
+})
+
+const slide = new LaniSlide(".rec-product-list", {
+    items: 4,
+    speed: 600,
+    loop: true,
+    autoplay: true,
+});
+
+
