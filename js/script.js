@@ -131,6 +131,7 @@ shoppingCart.addEventListener('click', (e) => {
 })
 
 // Recommended Products
+const recProducts = document.querySelector('#recommended-products');
 const recProductList = document.querySelector(".rec-product-list");
 const recProNum = [1, 5, 14, 29, 32, 43, 51];
 recProNum.forEach((number, index) => {
@@ -142,11 +143,54 @@ recProNum.forEach((number, index) => {
     recProductList.appendChild(cardWrapper);
 })
 
-const slide = new LaniSlide(".rec-product-list", {
+let slide = new LaniSlide(".rec-product-list", {
     items: 4,
     speed: 600,
     loop: true,
     autoplay: true,
 });
 
+let currentItems = 4;
+const updateSlide = () => {
+    const width = window.innerWidth;
+    let newItems;
+    
+    if (width > 1024) {
+        newItems = 4;
+    } else if (width > 640) {
+        newItems = 3;
+    } else {
+        newItems = 2;
+    }
+    
+    if (currentItems !== newItems) {
+        currentItems = newItems;
+        slide.opt.items = newItems;
+        
+        if (slide.track) {
+            slide.track.remove();
+        }
+        slide.slides = slide.originalSlides.slice(0);
+        slide.currentIndex = slide.opt.loop ? slide._getCloneCount() : 0;
+        slide._createTrack();
+        
+        if (slide.opt.nav && slide.navWrapper) {
+            slide.navWrapper.remove(); 
+            slide._createNav(); 
+        }
+        
+        slide._updatePosition();
+    }
+}
 
+const checkInterval = setInterval(() => {
+    updateSlide();
+}, 100);
+
+setTimeout(() => {
+    clearInterval(checkInterval);
+}, 3000);
+
+window.addEventListener('resize', () => {
+    updateSlide();
+})
