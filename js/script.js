@@ -147,7 +147,7 @@ let slide = new LaniSlide(".rec-product-list", {
     items: 4,
     speed: 600,
     loop: true,
-    autoplay: true,
+    
 });
 
 let currentItems = 4;
@@ -155,7 +155,7 @@ const updateSlide = () => {
     const width = window.innerWidth;
     let newItems;
     
-    if (width > 1024) {
+    if (width > 1200) {
         newItems = 4;
     } else if (width > 640) {
         newItems = 3;

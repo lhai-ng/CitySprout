@@ -153,12 +153,13 @@ h1 span:nth-child(2) {
 #recommended-products h4 {
     width: 100%;
     text-align: center;
+    color: var(--light0);
     margin: 0 0 var(--spacing-40) 0;
 }
 
 .rec-product-list {
     position: relative;
-    width: 1026px;
+    width: min(82vw, 1026px);
 }
 
 .rec-product-list:before {
@@ -212,6 +213,7 @@ h1 span:nth-child(2) {
     font: var(--h6-d);
     font-weight: 700;
     margin-left: var(--spacing-8);
+    word-spacing: -1.6px;
 }
 
 .rec-product-list .card-price {
@@ -318,7 +320,7 @@ h1 span:nth-child(2) {
 }
 
 #recommended-products .lanislide-dot.active {
-    background: #333;
+    background: var(--light35);
 }
 
 /* TABLET RESPONSIVE */
@@ -383,8 +385,103 @@ h1 span:nth-child(2) {
     }
 
     /* Recommended Products Section */
+    #recommended-products {
+        padding: min(10vw, var(--spacing-96)) 0;
+    }
 
+    #recommended-products h4 {
+        margin: 0 0 var(--spacing-32) 0;
+    }
 
+    .rec-product-list {
+        position: relative;
+        width: min(82vw, 688px);
+    }
+
+    .rec-product-list .card {
+        width: 160px;
+        height: 256px;
+        padding: var(--spacing-4);
+    }
+
+    .rec-product-list .card-image {
+        width: 152px;
+        height: 152px;
+    }
+
+    .rec-product-list .card-rating {
+        margin: var(--spacing-4) 0 var(--spacing-8) var(--spacing-4);
+    }
+    .rec-product-list .card-rating img {
+        width: var(--spacing-12);
+        height: var(--spacing-12);
+    }
+
+    .rec-product-list .card-name {
+        font: var(--h6-t);
+        font-weight: 700;
+        margin-left: var(--spacing-4);
+    }
+
+    .rec-product-list .card-price {
+        bottom: var(--spacing-12);
+        left: var(--spacing-8);
+        width: var(--spacing-48);
+        font: var(--h6-t);
+    }
+
+    .rec-product-list .card-prevprice {
+        bottom: var(--spacing-12);
+        left: var(--spacing-56);
+        width: var(--spacing-48);
+        font: var(--para-t);
+    }
+
+    .rec-product-list .add-to-cart {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+
+        width: var(--spacing-48);
+        height: var(--spacing-24);
+
+        gap: 2px;
+    }
+    .rec-product-list .add-to-cart p {
+        font: var(--h5-t);
+        font-weight: normal;
+    }
+    .rec-product-list .add-to-cart img {
+        width: 16px;
+        height: 15px;
+    }
+
+    .card-wrapper {
+        width: 172px;
+        height: 280px;
+    }
+
+    #recommended-products .lanislide-prev, #recommended-products .lanislide-next {
+        font: var(--h1-t);
+    }
+
+    #recommended-products .lanislide-prev {
+        left: -48px;
+    }
+
+    #recommended-products .lanislide-next {
+        right: -48px;
+    }
+
+    #recommended-products .lanislide-nav {
+        gap: var(--spacing-8);
+        margin-top: var(--spacing-32);
+    }
+
+    #recommended-products .lanislide-dot {
+        width: var(--spacing-28);
+        height: var(--spacing-4);
+    }
 }
 
 /* MOBILE RESPONSIVE */
