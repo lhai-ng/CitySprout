@@ -147,9 +147,11 @@ let slide = new LaniSlide(".rec-product-list", {
     items: 4,
     speed: 600,
     loop: true,
-    
+    autoplay: true,
 });
 
+const addToCartBtns_para = document.querySelectorAll(".add-to-cart p");
+const addToCartBtns_img = document.querySelectorAll(".add-to-cart img");
 let currentItems = 4;
 const updateSlide = () => {
     const width = window.innerWidth;
@@ -157,10 +159,28 @@ const updateSlide = () => {
     
     if (width > 1200) {
         newItems = 4;
+        addToCartBtns_para.forEach(p => {
+            p.textContent = '+';
+        })
+        addToCartBtns_img.forEach(img => {
+            img.style.display = 'block';
+        })
     } else if (width > 640) {
         newItems = 3;
+        addToCartBtns_para.forEach(p => {
+            p.textContent = '+';
+        })
+        addToCartBtns_img.forEach(img => {
+            img.style.display = 'block';
+        })
     } else {
         newItems = 2;
+        addToCartBtns_para.forEach(p => {
+            p.textContent = 'Add to cart';
+        })
+        addToCartBtns_img.forEach(img => {
+            img.style.display = 'none';
+        })
     }
     
     if (currentItems !== newItems) {

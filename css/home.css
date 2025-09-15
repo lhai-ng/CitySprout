@@ -546,4 +546,89 @@ h1 span:nth-child(2) {
     .categories-wrapper a h6 {
         text-align: center;
     }
+
+    /* Recommended Products Section */
+    #recommended-products {
+        padding: min(10vw, var(--spacing-64)) 0;
+    }
+
+    #recommended-products h4 {
+        margin: 0 0 var(--spacing-24) 0;
+    }
+
+    .rec-product-list {
+        position: relative;
+        width: min(82vw, 280px);
+    }
+
+    .rec-product-list .card {
+        width: 128px;
+        height: 256px;
+    }
+
+    .rec-product-list .card-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .rec-product-list .card-rating {
+        align-items: center;
+    }
+    .rec-product-list .card-rating img {
+        width: var(--spacing-8);
+        height: var(--spacing-8);
+    }
+
+    .rec-product-list .card-name {
+        font: var(--h6-m);
+        font-weight: 700;
+    }
+
+    .rec-product-list .card-price {
+        bottom: var(--spacing-36);
+        font: var(--h6-m);
+    }
+
+    .rec-product-list .card-prevprice {
+        bottom: var(--spacing-36);
+        font: var(--para-m);
+    }
+
+    .rec-product-list .add-to-cart {
+        width: 112px;
+        height: var(--spacing-20);
+        border-radius: 2px;
+        gap: 4px;
+    }
+    .rec-product-list .add-to-cart p {
+        font: var(--small-para-m);
+        font-weight: 700;
+    }
+
+    .card-wrapper {
+        width: 140px;
+        height: 280px;
+    }
+
+    #recommended-products .lanislide-prev, #recommended-products .lanislide-next {
+        font: var(--h1-m);
+    }
+
+    #recommended-products .lanislide-prev {
+        left: -20px;
+    }
+
+    #recommended-products .lanislide-next {
+        right: -20px;
+    }
+
+    #recommended-products .lanislide-nav {
+        gap: var(--spacing-4);
+        margin-top: var(--spacing-24);
+    }
+
+    #recommended-products .lanislide-dot {
+        width: var(--spacing-24);
+        height: var(--spacing-4);
+    }
 }
