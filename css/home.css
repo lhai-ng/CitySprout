@@ -27,7 +27,7 @@
 
 h1 {
     position: absolute;
-    top: min(40vh, 128px);
+    top: min(40vw, 128px);
     left: min(10vw, 160px);
     z-index: 2;
     width: min(90vw, 720px);
@@ -46,7 +46,7 @@ h1 span:nth-child(2) {
 
 #hero .btn {
     position: absolute;
-    top: min(60vh, 360px);
+    top: min(60vw, 360px);
     left: min(10vw, 160px);
     z-index: 2;
 
@@ -115,6 +115,7 @@ h1 span:nth-child(2) {
 
 #categories h4 {
     width: 100%;
+    color: var(--light0);
     text-align: center;
     margin: 120px 0 64px 0;
 }
@@ -323,6 +324,134 @@ h1 span:nth-child(2) {
     background: var(--light35);
 }
 
+/* Blog Intro Section */
+#blog-intro {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-128) var(--spacing-96);
+}
+
+.blog-intro-content {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    max-width: 1156px;
+}
+
+.blog-intro-content .title {
+    flex: .1 1 auto;
+    width: min(40vw, 480px);
+    height: max(256px, fit-content);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-24);
+    margin: 0 var(--spacing-16) var(--spacing-20) 0;
+    word-spacing: -1px;
+}
+
+.blog-intro-content .title h3 {
+    font-weight: 700;
+    color: var(--light0);
+}
+.blog-intro-content .title h3 span {
+    color: var(--primary);
+}
+.blog-intro-content .title h6 {
+    color: var(--light0);
+    word-spacing: -1px;
+}
+
+.blog-intro-content a {
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-intro-content .one {
+    width: min(45vw, 640px);
+    height: 256px;
+    color: var(--light90);
+    margin: 0 var(--spacing-20) var(--spacing-20) 0;
+}
+
+.blog-intro-content .two {
+    width: min(360px, 25vw);
+    height: 240px;
+    color: var(--light100);
+    margin: 0 var(--spacing-20) var(--spacing-20) 0;
+}
+.blog-intro-content .two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 0%, .2);
+    z-index: 2;
+}
+
+.blog-intro-content .three {
+    flex: .7 1 auto;
+    width: min(35vw, 500px);
+    height: 240px;
+    margin: 0 var(--spacing-20) var(--spacing-20) 0;
+    color: var(--secondary);
+}
+.blog-intro-content .three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 35%, .3);
+    z-index: 2;
+}
+
+.blog-intro-content .blog img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+    z-index: 1;
+}
+
+.blog-intro-content .blog h5, .blog-intro-content .blog h6 {
+    position: absolute;
+    bottom: var(--spacing-24);
+    left: var(--spacing-24);
+    z-index: 3;
+    font-weight: 700;
+}
+
+.blog-intro-content .final-link {
+    width: 256px;
+    height: 240px;
+    background: var(--secondary);
+}
+
+.blog-intro-content .final-link h5 {
+    position: absolute;
+    bottom: var(--spacing-24);
+    left: var(--spacing-24);
+    color: var(--primary);
+}
+
+.blog-intro-content .final-link img {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+}
+
 /* TABLET RESPONSIVE */
 @media (max-width: 1024px) {
     /* Hero Section */
@@ -342,14 +471,14 @@ h1 span:nth-child(2) {
 
     h1 {
         position: absolute;
-        top: min(25vh, 72px);
+        top: min(25vw, 72px);
         left: max(7vw, 20px);
         word-spacing: min(-1vw, -15px);
         z-index: 2;
     }
 
     #hero .btn {
-        top: min(40vh, 240px);
+        top: min(40vw, 240px);
         left: max(7vw, 20px);
 
         font: var(--h5-t);
@@ -482,6 +611,71 @@ h1 span:nth-child(2) {
         width: var(--spacing-28);
         height: var(--spacing-4);
     }
+
+    /* Blog Intro Section */
+    #blog-intro {
+        padding: var(--spacing-96) var(--spacing-72);
+    }
+
+    .blog-intro-content {
+        max-width: 692px;
+    }
+
+    .blog-intro-content .title {
+        order: 1;
+        width: min(48vw, 360px);
+        gap: var(--spacing-16);
+        margin: 0 var(--spacing-4) var(--spacing-16) 0;
+    }
+
+    .blog-intro-content .one {
+        flex: .7 1 auto;
+        order: 3;
+        width: min(45vw, 560px);
+        height: 240px;
+        margin: 0 0 var(--spacing-16) var(--spacing-56);
+    }
+
+    .blog-intro-content .two {
+        flex: 1 1 auto;
+        order: 2;
+        width: min(240px, 20vw);
+        height: 200px;
+        margin: 0 var(--spacing-16) var(--spacing-16) 0;
+    }
+
+    .blog-intro-content .three {
+        order: 4;
+        flex: .7 1 auto;
+        width: min(35vw, 400px);
+        height: 200px;
+        margin: 0 var(--spacing-16) var(--spacing-16) var(--spacing-56);
+    }
+
+    .blog-intro-content .blog h5, .blog-intro-content .blog h6 {
+        bottom: var(--spacing-16);
+        left: var(--spacing-16);
+    }
+
+    .blog-intro-content .final-link {
+        order: 5;
+        width: 220px;
+        height: 200px;
+    }
+
+    .blog-intro-content .final-link h5 {
+        width: 50%;
+        bottom: var(--spacing-16);
+        left: var(--spacing-16);
+        color: var(--primary);
+    }
+
+    .blog-intro-content .final-link img {
+        width: var(--spacing-16);
+        height: var(--spacing-16);
+        top: 16px;
+        right: 16px;
+    }
 }
 
 /* MOBILE RESPONSIVE */
@@ -496,29 +690,29 @@ h1 span:nth-child(2) {
     }
 
     .hero-building {
-        width: max(40vw);
+        width: max(40vw, 172px);
         height: max(30vw, 128px);
-        right: min(20vw, 96px);
+        right: min(15vw, 96px);
     }
 
     h1 {
-        width: 60vw;
+        width: max(60vw, 300px);
         position: absolute;
-        top: min(25vh, 72px);
+        top: min(25vw, 72px);
         left: max(7vw, 20px);
         word-spacing: min(-1vw, -5px);
         z-index: 2;
     }
 
     #hero .btn {
-        top: min(25vh, 240px);
+        top: max(25vw, 160px);
         left: max(7vw, 20px);
 
-        font: var(--h6-m);
+        font: var(--small-para-m);
         font-weight: 700;
 
         border: 2px solid var(--accent);       
-        padding: 6px 64px;
+        padding: 6px 48px;
     }
 
     .fade-out {
@@ -630,5 +824,70 @@ h1 span:nth-child(2) {
     #recommended-products .lanislide-dot {
         width: var(--spacing-24);
         height: var(--spacing-4);
+    }
+
+    /* Blog Intro Section */
+    #blog-intro {
+        padding: var(--spacing-64) var(--spacing-32);
+    }
+
+    .blog-intro-content {
+        max-width: 300px;
+    }
+
+    .blog-intro-content .title {
+        width: 300px;
+        gap: var(--spacing-8);
+        margin: 0 0 var(--spacing-16) 0;
+    }
+
+    .blog-intro-content .one {
+        flex: 1 1 auto;
+        order: 2;
+        width: 300px;
+        height: 140px;
+        margin: 0 0 var(--spacing-16) 0;
+    }
+
+    .blog-intro-content .two {
+        flex: 0 1 auto;
+        order: 4;
+        width: 164px;
+        height: 120px;
+        margin: 0 var(--spacing-8) var(--spacing-16) 0;
+    }
+
+    .blog-intro-content .three {
+        order: 3;
+        flex: 1 1 auto;
+        width: 300px;
+        height: 140px;
+        margin: 0 0 var(--spacing-16) 0;
+    }
+
+    .blog-intro-content .blog h5, .blog-intro-content .blog h6 {
+        font: var(--para-m);
+        font-weight: 700;
+        bottom: var(--spacing-16);
+        left: var(--spacing-16);
+    }
+
+    .blog-intro-content .final-link {
+        width: 128px;
+        height: 120px;
+    }
+
+    .blog-intro-content .final-link h5 {
+        font: var(--para-d);
+        font-weight: 700;
+        bottom: var(--spacing-8);
+        left: var(--spacing-8);
+    }
+
+    .blog-intro-content .final-link img {
+        width: var(--spacing-10);
+        height: var(--spacing-10);
+        top: 8px;
+        right: 8px;
     }
 }

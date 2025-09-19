@@ -994,7 +994,7 @@ footer {
 
     /* Cart */
     .cart-list {
-        width: min(90vw, 360px);
+        width: min(85vw, 360px);
         padding: 0 min(20px, 6vw);
     }
 
