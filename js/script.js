@@ -110,6 +110,11 @@ customElements.define("t-footer", TFooter)
 // Add to Cart
 const shoppingCart = document.querySelector('#shopping-cart');
 const cartList = document.querySelector('.cart-list');
+const cartIcon = document.querySelector('.cart-icon');
+const counter = document.createElement('div');
+counter.className = 'counter';
+cartIcon.appendChild(counter);
+
 product.loadCart('.cart-list');
 
 document.addEventListener('click', (e) => {
@@ -118,16 +123,22 @@ document.addEventListener('click', (e) => {
         e.stopPropagation();
         shoppingCart.style.left = '0';
         document.documentElement.style.overflow = 'hidden';
-        cartList.style.overflow = 'auto';
+        shoppingCart.ontransitionend = () => {
+            cartList.style.overflow = 'auto';
+        }
     }
+    updateCounter();
 })
 
 shoppingCart.addEventListener('click', (e) => {
     if (e.target === shoppingCart) {
         shoppingCart.style.left = '110vw';
-        document.documentElement.style.overflow = 'auto';
         cartList.style.overflow = 'hidden';
+        shoppingCart.ontransitionend = () => {
+            document.documentElement.style.overflow = 'auto';
+        }
     }
+    updateCounter();
 })
 
 // Recommended Products
@@ -143,11 +154,11 @@ recProNum.forEach((number, index) => {
     recProductList.appendChild(cardWrapper);
 })
 
-let slide = new LaniSlide(".rec-product-list", {
+let recSlide = new LaniSlide(".rec-product-list", {
     items: 4,
     speed: 600,
     loop: true,
-    autoplay: true,
+    autoplay: false,
 });
 
 const addToCartBtns_para = document.querySelectorAll(".add-to-cart p");
@@ -176,7 +187,7 @@ const updateSlide = () => {
     } else {
         newItems = 2;
         addToCartBtns_para.forEach(p => {
-            p.textContent = 'Add to cart';
+            p.textContent = 'Add to cart!';
         })
         addToCartBtns_img.forEach(img => {
             img.style.display = 'none';
@@ -185,21 +196,21 @@ const updateSlide = () => {
     
     if (currentItems !== newItems) {
         currentItems = newItems;
-        slide.opt.items = newItems;
+        recSlide.opt.items = newItems;
         
-        if (slide.track) {
-            slide.track.remove();
+        if (recSlide.track) {
+            recSlide.track.remove();
         }
-        slide.slides = slide.originalSlides.slice(0);
-        slide.currentIndex = slide.opt.loop ? slide._getCloneCount() : 0;
-        slide._createTrack();
+        recSlide.slides = recSlide.originalSlides.slice(0);
+        recSlide.currentIndex = recSlide.opt.loop ? recSlide._getCloneCount() : 0;
+        recSlide._createTrack();
         
-        if (slide.opt.nav && slide.navWrapper) {
-            slide.navWrapper.remove(); 
-            slide._createNav(); 
+        if (recSlide.opt.nav && recSlide.navWrapper) {
+            recSlide.navWrapper.remove(); 
+            recSlide._createNav(); 
         }
         
-        slide._updatePosition();
+        recSlide._updatePosition();
     }
 }
 
@@ -214,3 +225,69 @@ setTimeout(() => {
 window.addEventListener('resize', () => {
     updateSlide();
 })
+
+// Testimonials
+const tesSlide = new LaniSlide(".testimonial-list", {
+    items: 1,
+    speed: 120,
+    loop: true,
+})
+
+const testimonialList = document.querySelector(".testimonial-list");
+const nameTag = document.createElement('div');
+const prev = document.querySelectorAll('.lanislide-prev')[1];
+const next = document.querySelectorAll('.lanislide-next')[1];
+
+nameTag.className = 'name-tag';
+testimonialList.appendChild(nameTag)
+const names = ['Alexia', 'Bernard', 'John', 'Nancy', 'David'];
+
+const dots = document.querySelectorAll("#testimonials .lanislide-dot")
+function changeName() {
+    dots.forEach((dot, index) => {
+        const dotStyle = Array.from(dot.classList);
+        if (dotStyle.includes('active')) {
+            nameTag.textContent = names[index];
+        }
+    })
+}
+changeName()
+
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        changeName();
+        console.log('hihi');
+    })
+})
+prev.addEventListener('click', () => {
+    changeName();
+})
+next.addEventListener('click', () => {
+    changeName();
+})
+
+// Update Counter by clicking Add to cart Buttons
+function updateCounter() {
+    const cartBoxList = document.querySelectorAll('.cart-box');
+    counter.textContent = `${cartBoxList.length}`;
+}
+updateCounter();
+
+const atcBtns = document.querySelectorAll('.add-to-cart');
+atcBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        updateCounter();
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
