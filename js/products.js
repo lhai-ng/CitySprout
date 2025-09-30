@@ -1,3 +1,41 @@
+const product = new Products({
+    filter: true,
+    priceCondition: (filterValue) => {
+        if (filterValue === 'under-five') {
+            return {minValue: 0, maxValue: 5};
+        } else if (filterValue === 'five-ten') {
+            return {minValue: 5, maxValue: 10};
+        } else if (filterValue === 'ten-twenty') {
+            return {minValue: 10, maxValue: 20};
+        } else if (filterValue === 'twenty-thirty') {
+            return {minValue: 20, maxValue: 30};
+        } else if (filterValue === 'over-thirty') {
+            return {minValue: 30, maxValue: Infinity};
+        }
+        return {minValue: 0, maxValue: Infinity};
+    },
+    ratingCondition: (filterValue) => {
+        switch (filterValue) {
+            case 'from 1*':
+                return {minValue: 1, maxValue: 6};
+                break;
+            case 'from 2*':
+                return {minValue: 2, maxValue: 6};
+                break;
+            case 'from 3*':
+                return {minValue: 3, maxValue: 6};
+                break;
+            case 'from 4*':
+                return {minValue: 4, maxValue: 6};
+                break;
+            case '5*':
+                return {minValue: 5, maxValue: 6};
+                break;
+        }
+        return {minValue: 0, maxValue: 6};
+    }
+});
+
 const products = [
     new Products({
         id: 1,
@@ -3927,4 +3965,4 @@ const products = [
     }),
 ]
 
-const product = new Products();
+

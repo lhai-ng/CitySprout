@@ -502,7 +502,7 @@ h1 span:nth-child(2) {
     width: 200%;
     height: 100%;
     left: -200%;
-    background: hsla(0, 0%, 100%, .8);
+    background: hsla(0, 0%, 100%, .9);
     z-index: 2;
 }
 
@@ -513,7 +513,7 @@ h1 span:nth-child(2) {
     right: -200%;
     width: 200%;
     height: 100%;
-    background: hsla(0, 0%, 100%, .8);
+    background: hsla(0, 0%, 100%, .9);
     z-index: 2;
 }
 
@@ -841,7 +841,7 @@ h1 span:nth-child(2) {
     .blog-intro-content .one {
         flex: .7 1 auto;
         order: 3;
-        width: min(45vw, 560px);
+        width: min(35vw, 560px);
         height: 240px;
         margin: 0 0 var(--spacing-16) var(--spacing-56);
     }
@@ -869,8 +869,8 @@ h1 span:nth-child(2) {
 
     .blog-intro-content .final-link {
         order: 5;
-        width: 220px;
-        height: 200px;
+        width: min(30vw, 200px);
+        height: min(30vw, 200px);
     }
 
     .blog-intro-content .final-link h5 {
