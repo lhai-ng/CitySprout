@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitySprout -  Product Detail</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/productdetail.css">
+</head>
+<body>
+    <t-header></t-header>
+    <!-- Shopping Cart -->
+    <section id="shopping-cart">
+        <div class="cart-list"></div>
+    </section>
+    <section id="breadcrumb">
+        <a href="index.html">Home</a>
+        <p>></p>
+        <a href="shop.html">Shop</a>
+        <p>></p>
+    </section>
+    <!-- Main Content - Product Detail -->
+    <main>
+        <section id="product-detail"></section>
+    </main>
+    <t-footer></t-footer>
+    <script src="js/eCom.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const selectedId = params.get('id');
+        const selectedProduct = products.find((product) => product.id === parseInt(selectedId));
+
+        // Breadcrumb
+        const categoryCrumb = document.createElement('a');
+        categoryCrumb.href = `shop.html`;
+        categoryCrumb.textContent = `${selectedProduct.category}`;
+        const arrow = document.createElement('p');
+        arrow.textContent = '>';
+        const productCrumb = document.createElement('a');
+        productCrumb.href = `productdetail.html?id=${selectedId}`;
+        productCrumb.textContent = `${selectedProduct.name}`;
+        const breadcrumb = document.querySelector('#breadcrumb');
+        breadcrumb.append(categoryCrumb, arrow, productCrumb);
+
+        // Seperator
+        const container = document.querySelector('#product-detail');
+        product._renderDetail(container, products);
+        const seperator1 = document.createElement('hr');
+        const seperator2 = document.createElement('hr');
+        const description = document.querySelector('.description');
+        const productDetail = document.querySelector('.product-detail');
+        description.parentElement.insertBefore(seperator1, description);
+        productDetail.parentElement.insertBefore(seperator2, productDetail);
+
+        // Add to cart
+        const addToCartBtn = document.querySelector('#product-detail .add-to-cart');
+        const iconsBtn = document.createElement('span');
+        iconsBtn.className = 'icons-btn';
+        const plus = document.createElement('p');
+        plus.className = 'plus';
+        plus.textContent = '+';
+        const cartIconBtn = document.createElement('img');
+        cartIconBtn.className = 'cart-icon-btn'
+        cartIconBtn.src = 'svg-image/cart-white.svg';
+        iconsBtn.append(plus, cartIconBtn);
+        addToCartBtn.appendChild(iconsBtn)
+
+        // Update Counter by clicking Add to cart Buttons
+        function updateCounter() {
+            const cartBoxList = document.querySelectorAll('.cart-box');
+            counter.textContent = `${cartBoxList.length}`;
+        }
+        updateCounter();
+
+        const atcBtns = document.querySelectorAll('.add-to-cart');
+        atcBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                updateCounter();
+            })
+        })
+    </script>
+</body>
+</html>

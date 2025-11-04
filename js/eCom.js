@@ -266,7 +266,7 @@ Products.prototype._renderListCart = function (cart, cartList) {
         quantityBox.className = 'quantity-box';
         const quantityTitle = document.createElement('p');
         quantityTitle.textContent = 'Quantity';
-        quantityBox.append(quantityTitle, cartQuantityButtons)
+        quantityBox.append(quantityTitle, cartQuantityButtons);
         
         cartBoxInfo.append(cartName, cartRating, priceBox, quantityBox);
         cartBoxRemoveTotal.append(removeBtn, cartTotal);
@@ -332,6 +332,7 @@ Products.prototype._renderDetail = function (container, products) {
     const urlParams = new URLSearchParams(window.location.search);
     const selectedId = urlParams.get('id');
     const product = products.find(p => p.id === parseFloat(selectedId));
+    
 
     const imageContainer = document.createElement('div');
     const inforContainer = document.createElement('div');
@@ -340,12 +341,22 @@ Products.prototype._renderDetail = function (container, products) {
     const cardName = this._renderName(product);
     const cardPrice = this._renderPrice(product);
     const cardPrevPrice = this._renderPrevPrice(product);
-    const cardButton = this._renderCardBtn(product, `<h1>ADD TO CART!</h1>`);
+    const cardButton = this._renderCardBtn(product, `<h6>Add to cart</h6>`);
     const cardDescription = this._renderDescription(product);
     const cardProductDetail = this._renderProductDetail(product);
+
+    const priceBox = document.createElement('div');
+    priceBox.className = 'price-box';
+    priceBox.innerHTML = `
+        <p>Price</p>
+        <div>
+            ${cardPrice.outerHTML}
+            ${cardPrevPrice.outerHTML}
+        </div>
+    `;
     
     imageContainer.appendChild(cardImage);
-    inforContainer.append(cardName, cardRating, cardPrice, cardPrevPrice, cardButton, cardDescription, cardProductDetail);
+    inforContainer.append(cardName, cardRating, priceBox, cardButton, cardDescription, cardProductDetail);
 
     container.append(imageContainer, inforContainer);
 }

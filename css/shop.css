@@ -6,8 +6,9 @@ main {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: var(--spacing-8);
+    gap: var(--spacing-12);
     margin: var(--spacing-64) 0 var(--spacing-32) 10vw;
+    letter-spacing: -1px;
 }
 
 #breadcrumb a,
@@ -80,7 +81,7 @@ hr {
 
 #categories label {
     font: var(--h6-d);
-    color: var(--light60);
+    color: var(--black);
 }
 
 .ready-to-ship {
@@ -124,7 +125,7 @@ summary::-webkit-details-marker {
 summary::after {
     content: ">";
     font: var(--h5-d);
-    transition: transform 0.3s ease-out;
+    transition: transform 0.2s ease-out;
 }
 
 details[open] summary::after {

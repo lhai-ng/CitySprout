@@ -5,11 +5,11 @@ shop.appendChild(productList);
 
 // Render Categories & Filters
 const categories = document.querySelector('#categories');
-const seed = product.addFilterRadio('Seed', 'category', 'seed','', product.categoryCallback.bind(product));
-const soilFertilizer = product.addFilterRadio('Soil & Fertilizer', 'category', 'soil-fertilizer', '', product.categoryCallback.bind(product));
-const gardeningTools = product.addFilterRadio('Gardening Tools', 'category', 'gardening-tool', '', product.categoryCallback.bind(product));
-const potPlanters = product.addFilterRadio('Pots & Planters', 'category', 'pot-planter', '', product.categoryCallback.bind(product));
-const pestControl = product.addFilterRadio('Pest Control', 'category', 'pest-control', '', product.categoryCallback.bind(product));
+const seed = product.addFilterRadio('Seeds', 'category', 'Seeds','', product.categoryCallback.bind(product));
+const soilFertilizer = product.addFilterRadio('Soil & Fertilizer', 'category', 'Soil & Fertilizer', '', product.categoryCallback.bind(product));
+const gardeningTools = product.addFilterRadio('Gardening Tools', 'category', 'Gardening Tools', '', product.categoryCallback.bind(product));
+const potPlanters = product.addFilterRadio('Pots & Planters', 'category', 'Pots & Planters', '', product.categoryCallback.bind(product));
+const pestControl = product.addFilterRadio('Pest Control', 'category', 'Pest Control', '', product.categoryCallback.bind(product));
 categories.append(seed, soilFertilizer, gardeningTools, potPlanters, pestControl);
 
 const readyToShip = document.querySelector('.ready-to-ship');

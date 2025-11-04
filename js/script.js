@@ -17,18 +17,18 @@ class THeader extends HTMLElement {
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" height="24px" fill="#222"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
                             </label>
                             <a href="index.html">Home</a>
-                            <a href="about.html">About</a>
+                            <a class="coming-soon" href="about.html">About</a>
                             <a href="shop.html">Shop</a>
-                            <a href="blog.html">Blog</a>
-                            <a href="contact.html">Contact</a>
+                            <a class="coming-soon" href="blog.html">Blog</a>
+                            <a class="coming-soon" href="contact.html">Contact</a>
                         </div>    
                     </nav>
                 </div>
                 <div class="icon-set"> 
-                    <a href="">
+                    <a class="coming-soon" href="">
                         <img width="20px" height="20px" src="svg-image/search.svg" alt="Search">
                     </a>
-                    <a href="">
+                    <a class="coming-soon" href="">
                         <img width="20px" height="20px" src="svg-image/login.svg" alt="Login">
                     </a>
                     <a class="cart-icon" href="">
@@ -79,10 +79,10 @@ class TFooter extends HTMLElement {
                                 <p class="info-title">Menu</p>
                                 <hr>
                                 <a class="p" href="index.html">Home</a>
-                                <a class="p" href="about.html">About</a>
+                                <a class="p coming-soon" href="about.html">About</a>
                                 <a class="p" href="shop.html">Shop</a>
-                                <a class="p" href="blog.html">Blog</a>
-                                <a class="p" href="contact.html">Contact</a>
+                                <a class="p coming-soon" href="blog.html">Blog</a>
+                                <a class="p coming-soon" href="contact.html">Contact</a>
                             </div>
                             <div class="info other-info">
                                 <p class="info-title">Other Info</p>
@@ -104,7 +104,7 @@ class TFooter extends HTMLElement {
         `
     }
 }
-customElements.define("t-footer", TFooter)
+customElements.define("t-footer", TFooter);
 
 
 // Add to Cart
@@ -141,7 +141,13 @@ shoppingCart.addEventListener('click', (e) => {
     updateCounter();
 })
 
-
+const comingSoon = document.querySelectorAll(".coming-soon");
+comingSoon.forEach(element => {
+    element.onclick = (e) => {
+        e.preventDefault();
+        alert("Coming soon...");
+    }
+})
 
 
 
